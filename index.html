@@ -1,0 +1,521 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bamboo School × Base 2.0</title><style>@font-face{font-family:Roboto;font-weight:100;src:url(assets/fonts/roboto-latin-100-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Roboto;font-weight:100;src:url(assets/fonts/roboto-latin-ext-100-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Roboto;font-weight:100;src:url(assets/fonts/roboto-vietnamese-100-normal.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:Roboto;font-weight:300;src:url(assets/fonts/roboto-latin-300-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Roboto;font-weight:300;src:url(assets/fonts/roboto-latin-ext-300-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Roboto;font-weight:300;src:url(assets/fonts/roboto-vietnamese-300-normal.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:Roboto;font-weight:400;src:url(assets/fonts/roboto-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Roboto;font-weight:400;src:url(assets/fonts/roboto-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Roboto;font-weight:400;src:url(assets/fonts/roboto-vietnamese-400-normal.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:Roboto;font-weight:500;src:url(assets/fonts/roboto-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Roboto;font-weight:500;src:url(assets/fonts/roboto-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Roboto;font-weight:500;src:url(assets/fonts/roboto-vietnamese-500-normal.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:Roboto;font-weight:700;src:url(assets/fonts/roboto-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Roboto;font-weight:700;src:url(assets/fonts/roboto-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Roboto;font-weight:700;src:url(assets/fonts/roboto-vietnamese-700-normal.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+*{box-sizing:border-box;margin:0}body{margin:0;background:#0b1a11;font-family:Roboto,sans-serif}section{width:1920px;height:1080px;position:relative;overflow:hidden;box-sizing:border-box}p,h1,h2,h3{margin:0}
+html,body{height:100%;overflow:hidden}#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center center}
+section:not(.on){display:none!important}
+#bar{position:fixed;left:0;right:0;bottom:0;height:3px;background:#82C53F;width:0;transition:width .3s}
+#nav{position:fixed;right:16px;bottom:12px;color:#8FAA86;font:14px Roboto;opacity:.7}
+</style></head><body><div id="stage">
+<section id="cover" data-transition="fade" style="background:linear-gradient(160deg,#0F2A1A 0%,#123621 55%,#1B4A2B 100%);color:#EAF3E2;font-family:Roboto, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;padding:128px">
+<div style="display:flex;align-items:center;gap:40px">
+<div style="background:#F6F9F2;border-radius:14px;padding:10px 24px;display:flex"><img src="assets/9d30055d5a44b5086a9f73fd5c8a3e90.png" alt="Bamboo School" style="width:163px;height:60px;object-fit:contain"></div>
+<div style="width:2px;height:56px;background:#3C6B49"></div>
+<img src="assets/aebffac171eb9168d98b5e8d8979cce0.png" alt="Base.vn" style="width:152px;height:48px;object-fit:contain">
+</div>
+<p style="font-size:26px;letter-spacing:8px;color:#82C53F;font-weight:500">BAMBOO SCHOOL × BASE 2.0</p>
+<h1 style="font-size:168px;font-weight:700;line-height:1.05;text-align:center;background:linear-gradient(90deg,#EAF3E2,#82C53F);-webkit-background-clip:text;background-clip:text;color:transparent">THE AGENTIC<br>ENTERPRISE</h1>
+<p style="text-align:justify;font-size:34px;color:#C5D8BB;font-weight:300">Nền tảng vận hành nơi con người và AI Agent phối hợp thực thi công việc</p>
+<p style="font-size:24px;letter-spacing:6px;color:#8FAA86">10 · 2026</p>
+</section>
+<section id="agenda" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:6px;color:#3D7A1C;font-weight:500">BAMBOO SCHOOL × BASE.VN · 10 · 2026</p>
+<h2 style="font-size:84px;font-weight:300;line-height:1.1">Nội dung <b style="font-weight:700;color:#3D7A1C">trao đổi</b></h2>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;gap:48px;padding:30px 0;border-top:1px solid #CFDDC4">
+<h3 style="font-size:72px;font-weight:100;color:#5FA82A;width:140px">01</h3>
+<h3 style="font-size:44px;font-weight:700;width:520px">Nền tảng vận hành</h3>
+<p style="text-align:justify;font-size:28px;color:#4A5A4E;width:800px">Bối cảnh quản trị, yêu cầu và kiến trúc Base 2.0</p>
+</div>
+<div style="display:flex;align-items:center;gap:48px;padding:30px 0;border-top:1px solid #CFDDC4">
+<h3 style="font-size:72px;font-weight:100;color:#5FA82A;width:140px">02</h3>
+<h3 style="font-size:44px;font-weight:700;width:520px">Work OS</h3>
+<p style="text-align:justify;font-size:28px;color:#4A5A4E;width:800px">Quản lý công việc, quy trình, phê duyệt và văn bản</p>
+</div>
+<div style="display:flex;align-items:center;gap:48px;padding:30px 0;border-top:1px solid #CFDDC4">
+<h3 style="font-size:72px;font-weight:100;color:#5FA82A;width:140px">03</h3>
+<h3 style="font-size:44px;font-weight:700;width:520px">Digital Workforce</h3>
+<p style="font-size:28px;color:#4A5A4E;width:800px">Tích hợp AI Agent vào hoạt động vận hành</p>
+</div>
+<div style="display:flex;align-items:center;gap:48px;padding:30px 0;border-top:1px solid #CFDDC4;border-bottom:1px solid #CFDDC4">
+<h3 style="font-size:72px;font-weight:100;color:#5FA82A;width:140px">04</h3>
+<h3 style="font-size:44px;font-weight:700;width:520px">Meeting &amp; Townhall</h3>
+<p style="text-align:justify;font-size:28px;color:#4A5A4E;width:800px">Quản trị cuộc họp, ghi nhận bằng Amber Note và truyền thông nội bộ</p>
+</div>
+</div>
+</section>
+<section id="ch1" data-transition="fade" style="background:linear-gradient(160deg,#0F2A1A,#163A24);color:#EAF3E2;font-family:Roboto, sans-serif;display:flex;flex-direction:row;align-items:center;gap:72px;padding:128px 128px 220px">
+<h1 style="font-size:400px;font-weight:100;line-height:1;width:560px;background:linear-gradient(180deg,#82C53F,#2F6B3B);-webkit-background-clip:text;background-clip:text;color:transparent">01</h1>
+<div style="width:2px;height:420px;background:#2F5A3B"></div>
+<div style="display:flex;flex-direction:column;gap:24px;width:900px">
+<p style="font-size:26px;letter-spacing:6px;color:#82C53F;font-weight:500">— PHẦN 01</p>
+<h2 style="font-size:120px;font-weight:700;line-height:1.05">Nền tảng vận hành</h2>
+<p style="text-align:justify;font-size:34px;color:#C5D8BB;font-weight:300">Bối cảnh quản trị, yêu cầu và kiến trúc Base 2.0</p>
+</div>
+<div style="position:absolute;left:128px;bottom:120px;width:1664px;display:flex;gap:48px">
+<p style="font-size:26px;color:#82C53F;font-weight:500;padding-bottom:10px;border-bottom:3px solid #82C53F;width:380px">01 Nền tảng vận hành</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">02 Work OS</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:420px">03 Digital Workforce</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">04 Meeting &amp; Townhall</p>
+</div>
+</section>
+<section id="context" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:72px">
+<div style="width:700px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;letter-spacing:6px;color:#3D7A1C;font-weight:500">BỐI CẢNH VẬN HÀNH</p>
+<h2 style="font-size:60px;font-weight:700;line-height:1.1">Một hệ thống giáo dục, nhiều đơn vị cùng phối hợp</h2>
+<div style="display:flex;flex-direction:column;gap:22px;margin-top:8px">
+<div style="display:flex;gap:20px;padding-top:20px;border-top:1px solid #CFDDC4">
+<h3 style="font-size:40px;font-weight:300;color:#5FA82A;width:60px">01</h3>
+<div style="display:flex;flex-direction:column;gap:6px;width:560px"><h3 style="font-size:30px;font-weight:700">Điều hành xuyên suốt các cơ sở</h3><p style="text-align:justify;font-size:24px;color:#4A5A4E;line-height:1.35">Công việc được phân công từ Ban điều hành đến từng cơ sở và bộ phận.</p></div>
+</div>
+<div style="display:flex;gap:20px;padding-top:20px;border-top:1px solid #CFDDC4">
+<h3 style="font-size:40px;font-weight:300;color:#5FA82A;width:60px">02</h3>
+<div style="display:flex;flex-direction:column;gap:6px;width:560px"><h3 style="font-size:30px;font-weight:700">Phê duyệt qua nhiều cấp quản lý</h3><p style="text-align:justify;font-size:24px;color:#4A5A4E;line-height:1.35">Các đề xuất, tờ trình cần được luân chuyển đến đúng cấp có thẩm quyền.</p></div>
+</div>
+<div style="display:flex;gap:20px;padding-top:20px;border-top:1px solid #CFDDC4">
+<h3 style="font-size:40px;font-weight:300;color:#5FA82A;width:60px">03</h3>
+<div style="display:flex;flex-direction:column;gap:6px;width:560px"><h3 style="font-size:30px;font-weight:700">Chuẩn hóa quy trình toàn hệ thống</h3><p style="text-align:justify;font-size:24px;color:#4A5A4E;line-height:1.35">Quy trình xử lý sai phạm và tiêu chuẩn ISO cần được áp dụng nhất quán giữa các cơ sở.</p></div>
+</div>
+<div style="display:flex;gap:20px;padding-top:20px;border-top:1px solid #CFDDC4">
+<h3 style="font-size:40px;font-weight:300;color:#5FA82A;width:60px">04</h3>
+<div style="display:flex;flex-direction:column;gap:6px;width:560px"><h3 style="font-size:30px;font-weight:700">Đặc thù theo nhóm nhân sự</h3><p style="text-align:justify;font-size:24px;color:#4A5A4E;line-height:1.35">90 nhân sự văn phòng và 250 giáo viên có nhu cầu, phương thức làm việc khác nhau.</p></div>
+</div>
+</div>
+</div>
+<div style="width:892px;display:flex;flex-direction:column;gap:28px;align-items:center;justify-content:center">
+<div style="background:#17361F;color:#EAF3E2;border-radius:20px;padding:26px 56px;display:flex;flex-direction:column;align-items:center;gap:6px"><h3 style="font-size:36px;font-weight:700">Hệ thống Bamboo</h3><p style="font-size:24px;color:#B7D0AA">Ban điều hành · 340 nhân sự</p></div>
+<div style="width:2px;height:36px;background:#9DBF84"></div>
+<div style="display:flex;gap:28px">
+<div style="background:#FCFDFA;border:2px solid #82C53F;border-radius:20px;padding:26px 30px;display:flex;flex-direction:column;gap:6px;width:400px"><h3 style="font-size:32px;font-weight:700">Khối Văn phòng</h3><p style="font-size:26px;color:#4A5A4E">90 nhân sự</p><p style="text-align:justify;font-size:24px;color:#3D7A1C">Tài chính, Hành chính nhân sự, Tuyển sinh, ISO, Dự án</p></div>
+<div style="background:#FCFDFA;border:2px solid #82C53F;border-radius:20px;padding:26px 30px;display:flex;flex-direction:column;gap:6px;width:400px"><h3 style="font-size:32px;font-weight:700">Khối Cơ sở</h3><p style="font-size:26px;color:#4A5A4E">250 giáo viên</p><p style="font-size:24px;color:#3D7A1C">Tiểu học, THCS, THPT</p></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;width:828px;justify-content:center">
+<p style="font-size:24px;background:#E3EFD6;border-radius:999px;padding:8px 22px">An Phú Đông</p>
+<p style="font-size:24px;background:#E3EFD6;border-radius:999px;padding:8px 22px">Thới An</p>
+<p style="font-size:24px;background:#E3EFD6;border-radius:999px;padding:8px 22px">Thạnh Xuân</p>
+<p style="font-size:24px;background:#E3EFD6;border-radius:999px;padding:8px 22px">Tân Chánh Hiệp</p>
+<p style="font-size:24px;background:#E3EFD6;border-radius:999px;padding:8px 22px">Tân Phú</p>
+<p style="font-size:24px;background:#E3EFD6;border-radius:999px;padding:8px 22px">Hóc Môn</p>
+<p style="font-size:24px;background:#E3EFD6;border-radius:999px;padding:8px 22px">Tân Xuân</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">4</p>
+</section>
+<section id="requirement" data-transition="fade" style="background:linear-gradient(160deg,#0F2A1A,#163A24);color:#EAF3E2;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:56px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;letter-spacing:6px;color:#82C53F;font-weight:500">YÊU CẦU QUẢN TRỊ</p>
+<p style="font-size:36px;color:#9DB892;font-weight:300">Bamboo cần một nền tảng vận hành đáp ứng bốn yêu cầu cốt lõi</p>
+<h2 style="font-size:92px;font-weight:700;line-height:1.1">Một nền tảng thống nhất,<br>kết nối các nghiệp vụ vận hành</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:0">
+<div style="height:3px;background:linear-gradient(90deg,#82C53F,#2F6B3B)"></div>
+<div style="display:flex;gap:40px;padding-top:32px">
+<div style="display:flex;flex-direction:column;gap:10px;width:380px"><h3 style="font-size:32px;font-weight:700;color:#82C53F">Cơ cấu tổ chức tập trung</h3><p style="font-size:26px;color:#C5D8BB;line-height:1.35">Kết nối khối Văn phòng và các cơ sở trên cùng hệ thống</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;width:380px"><h3 style="font-size:32px;font-weight:700;color:#82C53F">Quy trình minh bạch</h3><p style="font-size:26px;color:#C5D8BB;line-height:1.35">Xác định rõ trách nhiệm, thẩm quyền và thời hạn xử lý</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;width:380px"><h3 style="font-size:32px;font-weight:700;color:#82C53F">Phê duyệt liền mạch</h3><p style="font-size:26px;color:#C5D8BB;line-height:1.35">Ký duyệt trực tiếp trên hồ sơ, không gián đoạn luồng xử lý</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;width:380px"><h3 style="font-size:32px;font-weight:700;color:#82C53F">AI hỗ trợ có kiểm soát</h3><p style="font-size:26px;color:#C5D8BB;line-height:1.35">AI Agent chuẩn bị thông tin, con người giữ quyền quyết định</p></div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#8FAA86">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8FAA86;text-align:right">5</p>
+</section>
+<section id="values" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;letter-spacing:6px;color:#3D7A1C;font-weight:500">GIÁ TRỊ QUẢN TRỊ</p>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Từ vận hành phân tán đến quản trị thống nhất trên toàn hệ thống</h2>
+<p style="text-align:justify;font-size:28px;color:#4A5A4E">Ba năng lực trọng tâm Bamboo School hướng tới khi chuyển đổi sang Base 2.0.</p>
+</div>
+<div style="display:flex;gap:28px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FCFDFA;border:1px solid #CFDDC4;border-top:8px solid #3D7A1C;border-radius:20px;padding:24px 32px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="display:flex;align-items:flex-end;gap:16px"><h3 style="font-size:72px;font-weight:100;line-height:1;color:#3D7A1C">01</h3><p style="font-size:24px;letter-spacing:4px;color:#2F6B16;font-weight:500;padding-bottom:12px">TRỤ CỘT</p></div>
+<div style="width:72px;height:72px;border-radius:20px;background:#E3EFD6;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#2F6B16" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div>
+</div>
+<h3 style="font-size:30px;font-weight:700;line-height:1.2;color:#17261C">CHUẨN HÓA VẬN HÀNH ĐA CƠ SỞ</h3>
+<p style="text-align:justify;font-size:24px;line-height:1.4;color:#2E3F33">Thiết lập phương thức phối hợp thống nhất giữa Ban Điều hành, khối Văn phòng và các cơ sở; đồng thời bảo đảm tính linh hoạt theo đặc thù từng đơn vị.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FCFDFA;border:1px solid #CFDDC4;border-top:8px solid #3D7A1C;border-radius:20px;padding:24px 32px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="display:flex;align-items:flex-end;gap:16px"><h3 style="font-size:72px;font-weight:100;line-height:1;color:#3D7A1C">02</h3><p style="font-size:24px;letter-spacing:4px;color:#2F6B16;font-weight:500;padding-bottom:12px">TRỤ CỘT</p></div>
+<div style="width:72px;height:72px;border-radius:20px;background:#E3EFD6;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#2F6B16" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+</div>
+<h3 style="font-size:30px;font-weight:700;line-height:1.2;color:#17261C">MINH BẠCH VÀ KIỂM SOÁT XUYÊN SUỐT</h3>
+<p style="text-align:justify;font-size:24px;line-height:1.4;color:#2E3F33">Tập trung công việc, quy trình và hồ sơ trên một nền tảng; giúp các cấp quản lý theo dõi tiến độ, xác định trách nhiệm và truy vết quá trình xử lý.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FCFDFA;border:1px solid #CFDDC4;border-top:8px solid #1F6FD0;border-radius:20px;padding:24px 32px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="display:flex;align-items:flex-end;gap:16px"><h3 style="font-size:72px;font-weight:100;line-height:1;color:#1F6FD0">03</h3><p style="font-size:24px;letter-spacing:4px;color:#0F4C97;font-weight:500;padding-bottom:12px">TRỤ CỘT</p></div>
+<div style="width:72px;height:72px;border-radius:20px;background:#E6EFFA;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#0F4C97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+</div>
+<h3 style="font-size:30px;font-weight:700;line-height:1.2;color:#17261C">TỪNG BƯỚC HÌNH THÀNH NĂNG LỰC VẬN HÀNH VỚI AI</h3>
+<p style="text-align:justify;font-size:24px;line-height:1.4;color:#2E3F33">Đưa AI Agent tham gia vào các nghiệp vụ phù hợp, hỗ trợ phân tích và thực thi tác vụ, trong khi con người giữ vai trò kiểm soát và ra quyết định.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:28px;background:#17361F;border-radius:20px;padding:22px 44px">
+<div style="width:10px;height:48px;border-radius:5px;background:#82C53F"></div>
+<p style="text-align:justify;font-size:36px;font-weight:500;color:#EAF3E2;line-height:1.2">Một nền tảng vận hành chung — kết nối tổ chức, công việc, dữ liệu và AI.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">6</p>
+</section>
+<section id="answer" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:24px;letter-spacing:6px;color:#3D7A1C;font-weight:500">KIẾN TRÚC GIẢI PHÁP</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1">Base 2.0: một nền tảng, ba lớp năng lực vận hành</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;gap:36px;background:#E6EFFA;border-radius:20px;padding:26px 36px">
+<div style="width:340px;display:flex;flex-direction:column;gap:4px"><h3 style="font-size:32px;font-weight:700;color:#0F4C97">Digital Workforce</h3><p style="text-align:justify;font-size:24px;color:#33506F">AI Agent tham gia thực thi công việc cùng con người</p></div>
+<div style="display:flex;gap:20px">
+<div style="display:flex;align-items:center;gap:14px;background:#FCFDFA;border-radius:16px;padding:12px 24px"><img src="assets/2bff8adefea7a99888f0628eb34d57c6.png" alt="AgentHub" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">AgentHub</h3></div>
+<div style="display:flex;align-items:center;gap:14px;background:#FCFDFA;border-radius:16px;padding:12px 24px"><img src="assets/18b5bb1517247d863fcec236e748c47e.png" alt="Home" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">Home</h3></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:36px;background:#E3EFD6;border-radius:20px;padding:26px 36px">
+<div style="width:340px;display:flex;flex-direction:column;gap:4px"><h3 style="font-size:32px;font-weight:700;color:#2F6B16">Work OS</h3><p style="font-size:24px;color:#41603A">Số hóa và điều phối hoạt động vận hành</p></div>
+<div style="display:flex;gap:10px">
+<div style="display:flex;align-items:center;gap:10px;background:#FCFDFA;border-radius:16px;padding:12px 14px"><img src="assets/4edaa38c740ae4e97d96cf3ac88d00af.png" alt="BPM" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">BPM</h3></div>
+<div style="display:flex;align-items:center;gap:10px;background:#FCFDFA;border-radius:16px;padding:12px 14px"><img src="assets/3c7cf810094b9485c18b4eddf81619ad.png" alt="Task" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">Task</h3></div>
+<div style="display:flex;align-items:center;gap:10px;background:#FCFDFA;border-radius:16px;padding:12px 14px"><img src="assets/af575416fe051b30f622ec6a9f12825d.png" alt="E-Sign" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">E-Sign</h3></div>
+<div style="display:flex;align-items:center;gap:10px;background:#FCFDFA;border-radius:16px;padding:12px 14px"><img src="assets/528c9555ad2cca486c3185f185f9f920.png" alt="E-Office" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">E-Office</h3></div>
+<div style="display:flex;align-items:center;gap:10px;background:#FCFDFA;border-radius:16px;padding:12px 14px"><img src="assets/be569ba46c2aa23c75dcd8240a9be6a5.png" alt="Meeting" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">Meeting</h3></div>
+<div style="display:flex;align-items:center;gap:10px;background:#FCFDFA;border-radius:16px;padding:12px 14px"><img src="assets/97186040f6e3fc57f31a84a29ad60c7d.png" alt="Townhall" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">Townhall</h3></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:36px;background:#17361F;color:#EAF3E2;border-radius:20px;padding:26px 36px">
+<div style="width:340px;display:flex;flex-direction:column;gap:4px"><h3 style="font-size:32px;font-weight:700;color:#82C53F">Nền tảng tổ chức và dữ liệu</h3><p style="text-align:justify;font-size:24px;color:#B7D0AA">Một tài khoản, một cơ cấu tổ chức, một nguồn dữ liệu dùng chung</p></div>
+<div style="display:flex;gap:20px">
+<div style="display:flex;align-items:center;gap:14px;background:#FCFDFA;color:#17261C;border-radius:16px;padding:12px 24px"><img src="assets/f68527045c1ced11e5fa725b9b843f16.png" alt="Workforce" style="width:56px;height:56px;object-fit:contain"><h3 style="font-size:28px;font-weight:700">Workforce</h3></div>
+<div style="display:flex;align-items:center;gap:14px;background:#FCFDFA;color:#17261C;border-radius:16px;padding:12px 24px;height:80px"><h3 style="font-size:28px;font-weight:700">Dataset</h3></div>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">7</p>
+</section>
+<section id="mapping" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:24px;letter-spacing:6px;color:#3D7A1C;font-weight:500">LỘ TRÌNH CHUYỂN ĐỔI BASE 1.0 → BASE 2.0</p>
+<h2 style="font-size:60px;font-weight:700;line-height:1.1">Kế thừa ứng dụng hiện hữu, mở rộng năng lực vận hành</h2>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;gap:28px;padding:17px 0;border-top:1px solid #CFDDC4"><h3 style="font-size:30px;font-weight:700;width:230px;color:#5B6B5F">Task</h3><p style="font-size:30px;color:#5FA82A;width:40px">→</p><h3 style="font-size:30px;font-weight:700;width:330px">Task</h3><p style="text-align:justify;font-size:26px;color:#4A5A4E;width:960px">Phân công theo cơ sở, mở rộng khả năng giao việc cho AI Agent</p></div>
+<div style="display:flex;align-items:center;gap:28px;padding:17px 0;border-top:1px solid #CFDDC4"><h3 style="font-size:30px;font-weight:700;width:230px;color:#5B6B5F">Workflow</h3><p style="font-size:30px;color:#5FA82A;width:40px">→</p><h3 style="font-size:30px;font-weight:700;width:330px">BPM</h3><p style="text-align:justify;font-size:26px;color:#4A5A4E;width:960px">Chuẩn hóa luồng xử lý trực quan, tích hợp AI Agent tại từng bước phù hợp</p></div>
+<div style="display:flex;align-items:center;gap:28px;padding:17px 0;border-top:1px solid #CFDDC4"><h3 style="font-size:30px;font-weight:700;width:230px;color:#5B6B5F">Request</h3><p style="font-size:30px;color:#5FA82A;width:40px">→</p><h3 style="font-size:30px;font-weight:700;width:330px">BPM + E-Sign</h3><p style="text-align:justify;font-size:26px;color:#4A5A4E;width:960px">Quản lý đề xuất xuyên suốt từ phê duyệt đến ký số</p></div>
+<div style="display:flex;align-items:center;gap:28px;padding:17px 0;border-top:1px solid #CFDDC4"><h3 style="font-size:30px;font-weight:700;width:230px;color:#5B6B5F">Inside</h3><p style="font-size:30px;color:#5FA82A;width:40px">→</p><h3 style="font-size:30px;font-weight:700;width:330px">Townhall</h3><p style="text-align:justify;font-size:26px;color:#4A5A4E;width:960px">Truyền thông theo cơ sở, tích hợp sự kiện, khảo sát và quy chế</p></div>
+<div style="display:flex;align-items:center;gap:28px;padding:17px 0;border-top:1px solid #CFDDC4"><h3 style="font-size:30px;font-weight:700;width:230px;color:#3D7A1C">Mới ở 2.0</h3><p style="font-size:30px;color:#5FA82A;width:40px">+</p><h3 style="font-size:30px;font-weight:700;width:330px">Workforce</h3><p style="text-align:justify;font-size:26px;color:#4A5A4E;width:960px">Quản lý cơ cấu tổ chức thống nhất trên toàn bộ ứng dụng</p></div>
+<div style="display:flex;align-items:center;gap:28px;padding:17px 0;border-top:1px solid #CFDDC4"><h3 style="font-size:30px;font-weight:700;width:230px;color:#3D7A1C">Mới ở 2.0</h3><p style="font-size:30px;color:#5FA82A;width:40px">+</p><h3 style="font-size:30px;font-weight:700;width:330px">E-Office</h3><p style="text-align:justify;font-size:26px;color:#4A5A4E;width:960px">Quản lý văn bản đến, đi; hỗ trợ tóm tắt, bút phê và phân công xử lý</p></div>
+<div style="display:flex;align-items:center;gap:28px;padding:17px 0;border-top:1px solid #CFDDC4;border-bottom:1px solid #CFDDC4"><h3 style="font-size:30px;font-weight:700;width:230px;color:#3D7A1C">Mới ở 2.0</h3><p style="font-size:30px;color:#5FA82A;width:40px">+</p><h3 style="font-size:30px;font-weight:700;width:330px">AgentHub, Home</h3><p style="text-align:justify;font-size:26px;color:#4A5A4E;width:960px">Đưa AI Agent vào quy trình và hỗ trợ truy cập dịch vụ tập trung</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">8</p>
+</section>
+<section id="workforce" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/f68527045c1ced11e5fa725b9b843f16.png" alt="Workforce" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">WORKFORCE</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Thống nhất cơ cấu tổ chức trên toàn hệ thống Bamboo</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Khối Văn phòng và các cơ sở được quản lý trên một sơ đồ tổ chức chung.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Mỗi vị trí công việc có thể được đảm nhiệm bởi nhân sự hoặc AI Agent.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Các ứng dụng khai thác thống nhất dữ liệu tổ chức và vai trò từ Workforce.</p>
+</div>
+</div>
+<video data-src="assets/d834433ec9e25aa9ddebebf14df6c550.mp4" poster="assets/e3a4979b3603de2d1e39e30a94a6e423.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">9</p>
+</section>
+<section id="service" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/f68527045c1ced11e5fa725b9b843f16.png" alt="Workforce" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">WORKFORCE · SERVICE</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Tổ chức nghiệp vụ dưới dạng danh mục dịch vụ tập trung</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Danh mục 18 dịch vụ được triển khai trên các ứng dụng BPM, E-Office, Task, AgentHub.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">AI Agent được cấu hình như một dịch vụ, quản lý cùng hệ thống nghiệp vụ.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Ví dụ: Dịch vụ phê duyệt tờ trình mua sắm được vận hành trên BPM.</p>
+</div>
+</div>
+<video data-src="assets/f75bda21005191af1b8833871191a553.mp4" poster="assets/1fc60c0d077baa2de5d2bba2e3a65f67.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">10</p>
+</section>
+<section id="ch2" data-transition="fade" style="background:linear-gradient(160deg,#0F2A1A,#163A24);color:#EAF3E2;font-family:Roboto, sans-serif;display:flex;flex-direction:row;align-items:center;gap:72px;padding:128px 128px 220px">
+<h1 style="font-size:400px;font-weight:100;line-height:1;width:560px;background:linear-gradient(180deg,#82C53F,#2F6B3B);-webkit-background-clip:text;background-clip:text;color:transparent">02</h1>
+<div style="width:2px;height:420px;background:#2F5A3B"></div>
+<div style="display:flex;flex-direction:column;gap:24px;width:900px">
+<p style="font-size:26px;letter-spacing:6px;color:#82C53F;font-weight:500">— PHẦN 02</p>
+<h2 style="font-size:120px;font-weight:700;line-height:1.05">Work OS</h2>
+<p style="text-align:justify;font-size:34px;color:#C5D8BB;font-weight:300">Quản lý công việc, quy trình, phê duyệt và văn bản</p>
+</div>
+<div style="position:absolute;left:128px;bottom:120px;width:1664px;display:flex;gap:48px">
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">01 Nền tảng vận hành</p>
+<p style="font-size:26px;color:#82C53F;font-weight:500;padding-bottom:10px;border-bottom:3px solid #82C53F;width:380px">02 Work OS</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:420px">03 Digital Workforce</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">04 Meeting &amp; Townhall</p>
+</div>
+</section>
+<section id="task" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/3c7cf810094b9485c18b4eddf81619ad.png" alt="Task" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">TASK</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Phân công công việc linh hoạt, theo dõi toàn bộ quá trình thực thi</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Công việc có thể được giao cho nhân sự hoặc AI Agent phù hợp.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Các bước xử lý của Agent được ghi nhận theo trình tự và thời gian thực hiện.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Kết quả thực thi được cập nhật trực tiếp vào công việc để kiểm tra, theo dõi.</p>
+</div>
+</div>
+<video data-src="assets/3c0e4ca7a1efc9dd04de9991fb6b3975.mp4" poster="assets/3ddd59bf3c82ad2d5e49ab2a6759cb1b.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">12</p>
+</section>
+<section id="bpmflow" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/4edaa38c740ae4e97d96cf3ac88d00af.png" alt="BPM" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">BPM</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Chuẩn hóa quy trình phê duyệt trên một luồng xử lý trực quan</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Mỗi bước được phân công theo vị trí công việc đã thiết lập trên Workforce.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Bước 2 được thực hiện bởi Agent Rà soát tờ trình.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Theo dõi lưu lượng hồ sơ trong 7, 30, 90 ngày và số hồ sơ đang chờ tại từng bước.</p>
+</div>
+</div>
+<video data-src="assets/512d3b262ef06c648705f84a5c281819.mp4" poster="assets/89176af4e0abb5b9f2fd19307d4f0b40.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">13</p>
+</section>
+<section id="esign" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/af575416fe051b30f622ec6a9f12825d.png" alt="E-Sign" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">E-SIGN</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Ký số theo đúng thẩm quyền, kiểm soát tiến độ từng hồ sơ</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Mỗi tờ trình được tổ chức thành một hồ sơ ký với thứ tự ký xác định.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Tiến độ ký được cập nhật rõ ràng: đã hoàn thành 4/5, đang chờ người nào.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Khi hoàn tất ký, hồ sơ chuyển sang E-Office để phát hành và lưu trữ.</p>
+</div>
+</div>
+<video data-src="assets/2056654935ff5cca99e4cbf920c220d4.mp4" poster="assets/0da387a698230fc95311245bc80b1b83.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">14</p>
+</section>
+<section id="eoffice" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/528c9555ad2cca486c3185f185f9f920.png" alt="E-Office" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">E-OFFICE</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Quản lý xuyên suốt vòng đời văn bản sau phê duyệt</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Hồ sơ từ BPM được chuyển sang E-Office sau khi hoàn tất 4 chữ ký.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">AI hỗ trợ tóm tắt nội dung, giúp người phụ trách nắm bắt thông tin nhanh chóng.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Văn thư thực hiện cấp số, phát hành và lưu trữ theo quy trình ISO.</p>
+</div>
+</div>
+<video data-src="assets/97996e96eaf2684f75c276a906f1d319.mp4" poster="assets/fc6434314f77054ba37697e3fe90fb08.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">15</p>
+</section>
+<section id="chain" data-transition="fade" style="background:#17361F;color:#EAF3E2;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:24px;letter-spacing:6px;color:#82C53F;font-weight:500">VẬN HÀNH LIÊN THÔNG VỚI WORK OS</p>
+<h2 style="font-size:68px;font-weight:700;line-height:1.1">Một hồ sơ xuyên suốt từ đề xuất đến phát hành, không nhập liệu lặp lại</h2>
+</div>
+<div style="display:flex;align-items:stretch;gap:20px">
+<div style="width:340px;background:#1F4A2B;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:14px"><img src="assets/4edaa38c740ae4e97d96cf3ac88d00af.png" alt="BPM" style="width:64px;height:64px;object-fit:contain"><h3 style="font-size:34px;font-weight:700">Khởi tạo tờ trình</h3><p style="font-size:26px;color:#C5D8BB;line-height:1.35">Cơ sở lập hồ sơ, chọn mã chi phí; Agent hỗ trợ rà soát ngân sách và đơn giá.</p></div>
+<p style="font-size:48px;color:#82C53F;align-self:center">→</p>
+<div style="width:340px;background:#1F4A2B;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:14px"><img src="assets/4edaa38c740ae4e97d96cf3ac88d00af.png" alt="BPM" style="width:64px;height:64px;object-fit:contain"><h3 style="font-size:34px;font-weight:700">Phê duyệt theo thẩm quyền</h3><p style="font-size:26px;color:#C5D8BB;line-height:1.35">Trưởng phòng, Trưởng cơ sở, điều hành, tài chính xem xét trên cơ sở thông tin và kết quả rà soát của Agent.</p></div>
+<p style="font-size:48px;color:#82C53F;align-self:center">→</p>
+<div style="width:340px;background:#1F4A2B;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:14px"><img src="assets/af575416fe051b30f622ec6a9f12825d.png" alt="E-Sign" style="width:64px;height:64px;object-fit:contain"><h3 style="font-size:34px;font-weight:700">Ký số</h3><p style="font-size:26px;color:#C5D8BB;line-height:1.35">Thực hiện ký tuần tự, theo dõi rõ người ký và trạng thái hồ sơ.</p></div>
+<p style="font-size:48px;color:#82C53F;align-self:center">→</p>
+<div style="width:340px;background:#1F4A2B;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:14px"><img src="assets/528c9555ad2cca486c3185f185f9f920.png" alt="E-Office" style="width:64px;height:64px;object-fit:contain"><h3 style="font-size:34px;font-weight:700">Phát hành và lưu trữ</h3><p style="font-size:26px;color:#C5D8BB;line-height:1.35">Cấp số hiệu, lưu trữ theo quy trình ISO, thuận tiện tra cứu và truy vết.</p></div>
+</div>
+<p style="font-size:30px;color:#B7D0AA;font-weight:300">Một mã hồ sơ xuyên suốt: TT-2610-0412</p>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#8FAA86">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8FAA86;text-align:right">16</p>
+</section>
+<section id="ch3" data-transition="fade" style="background:linear-gradient(160deg,#0F2A1A,#163A24);color:#EAF3E2;font-family:Roboto, sans-serif;display:flex;flex-direction:row;align-items:center;gap:72px;padding:128px 128px 220px">
+<h1 style="font-size:400px;font-weight:100;line-height:1;width:560px;background:linear-gradient(180deg,#82C53F,#2F6B3B);-webkit-background-clip:text;background-clip:text;color:transparent">03</h1>
+<div style="width:2px;height:420px;background:#2F5A3B"></div>
+<div style="display:flex;flex-direction:column;gap:24px;width:900px">
+<p style="font-size:26px;letter-spacing:6px;color:#82C53F;font-weight:500">— PHẦN 03</p>
+<h2 style="font-size:104px;font-weight:700;line-height:1.05">Digital Workforce</h2>
+<p style="text-align:justify;font-size:34px;color:#C5D8BB;font-weight:300">AI Agent tham gia thực thi nghiệp vụ trong quy trình</p>
+</div>
+<div style="position:absolute;left:128px;bottom:120px;width:1664px;display:flex;gap:48px">
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">01 Nền tảng vận hành</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">02 Work OS</p>
+<p style="font-size:26px;color:#82C53F;font-weight:500;padding-bottom:10px;border-bottom:3px solid #82C53F;width:420px">03 Digital Workforce</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">04 Meeting &amp; Townhall</p>
+</div>
+</section>
+<section id="agenthub" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/2bff8adefea7a99888f0628eb34d57c6.png" alt="AgentHub" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">AGENTHUB</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Xây dựng đội ngũ AI Agent theo từng nghiệp vụ cụ thể</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Ứng dụng vào rà soát tờ trình, tiếp nhận phản ánh, cảnh báo nguy cơ rút hồ sơ.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Mỗi AI Agent được phân công thực hiện một bước phù hợp trong quy trình.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Tập trung tạo lập, cấu hình, trao đổi và quản lý Agent theo từng nhóm nghiệp vụ.</p>
+</div>
+</div>
+<video data-src="assets/d2b0ce5fd4535a4e51db8676dd185f8c.mp4" poster="assets/02f046f0e99587424b6c35a5d517c432.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">18</p>
+</section>
+<section id="bpmcase" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/4edaa38c740ae4e97d96cf3ac88d00af.png" alt="BPM" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">BPM · AI AGENT</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">AI Agent rà soát hồ sơ, cung cấp căn cứ hỗ trợ phê duyệt</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Đối chiếu ngân sách, đơn giá và cấp ký trước khi chuyển đến người duyệt.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Phát hiện điểm cần xác minh, chẳng hạn đơn giá vượt lần mua gần nhất.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">AI Agent đưa ra khuyến nghị; người có thẩm quyền quyết định ký duyệt.</p>
+</div>
+</div>
+<video data-src="assets/288b0815e4ae27064c7c4aeb8bcbd569.mp4" poster="assets/55512e753df0aeae64bba2a4cead7ac8.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">19</p>
+</section>
+<section id="bpmpa" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/4edaa38c740ae4e97d96cf3ac88d00af.png" alt="BPM" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">BPM · AI AGENT</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Tự động phân loại phản ánh phụ huynh ngay từ bước tiếp nhận</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">AI Agent tiếp nhận, phân loại nội dung và đánh giá mức độ phản ánh.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Các trường hợp nghiêm trọng được chuyển trực tiếp đến Trưởng cơ sở.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Kết quả xử lý được xác nhận với phụ huynh trước khi hoàn tất hồ sơ.</p>
+</div>
+</div>
+<video data-src="assets/fafae8b07c5c9b4dbb958e953a33bd49.mp4" poster="assets/f96876cb22c77b225c5013df075bfaf3.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">20</p>
+</section>
+<section id="home" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/18b5bb1517247d863fcec236e748c47e.png" alt="Home" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">HOME</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Truy cập dịch vụ nội bộ thuận tiện qua ngôn ngữ tự nhiên</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Cán bộ, giáo viên có thể tìm dịch vụ bằng nhu cầu thực tế: nghỉ phép, lập tờ trình.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Trợ lý gợi ý đúng dịch vụ để người dùng lựa chọn và khởi tạo.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Danh mục dịch vụ được tổ chức tập trung theo nhân sự, tài chính, tuyển sinh.</p>
+</div>
+</div>
+<video data-src="assets/b9abfde94cb06d94f89b88fd199fb0fd.mp4" poster="assets/1ed4bdd6348ed12bd32b7b44cc3ab07b.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">21</p>
+</section>
+<section id="principles" data-transition="fade" style="background:linear-gradient(160deg,#0F2A1A,#163A24);color:#EAF3E2;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:64px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;letter-spacing:6px;color:#82C53F;font-weight:500">NGUYÊN TẮC VẬN HÀNH AI AGENT</p>
+<h2 style="font-size:104px;font-weight:700;line-height:1.08">AI hỗ trợ thực thi.<br><span style="color:#82C53F">Con người kiểm soát quyết định.</span></h2>
+</div>
+<div style="display:flex;gap:40px">
+<div style="width:520px;display:flex;flex-direction:column;gap:12px;padding-top:28px;border-top:3px solid #82C53F"><h3 style="font-size:36px;font-weight:700">Vai trò của AI Agent</h3><p style="text-align:justify;font-size:28px;color:#C5D8BB;line-height:1.4">Đọc, đối chiếu, tóm tắt, phân loại và chuẩn bị nội dung dự thảo.</p></div>
+<div style="width:520px;display:flex;flex-direction:column;gap:12px;padding-top:28px;border-top:3px solid #82C53F"><h3 style="font-size:36px;font-weight:700">Vai trò của con người</h3><p style="text-align:justify;font-size:28px;color:#C5D8BB;line-height:1.4">Phê duyệt, xử lý tình huống nghiêm trọng và chịu trách nhiệm cuối cùng.</p></div>
+<div style="width:520px;display:flex;flex-direction:column;gap:12px;padding-top:28px;border-top:3px solid #82C53F"><h3 style="font-size:36px;font-weight:700">Khả năng truy vết</h3><p style="text-align:justify;font-size:28px;color:#C5D8BB;line-height:1.4">Ghi nhận tác vụ Agent thực hiện, nguồn tri thức tham chiếu và bước xử lý.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#8FAA86">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#8FAA86;text-align:right">22</p>
+</section>
+<section id="ch4" data-transition="fade" style="background:linear-gradient(160deg,#0F2A1A,#163A24);color:#EAF3E2;font-family:Roboto, sans-serif;display:flex;flex-direction:row;align-items:center;gap:72px;padding:128px 128px 220px">
+<h1 style="font-size:400px;font-weight:100;line-height:1;width:560px;background:linear-gradient(180deg,#82C53F,#2F6B3B);-webkit-background-clip:text;background-clip:text;color:transparent">04</h1>
+<div style="width:2px;height:420px;background:#2F5A3B"></div>
+<div style="display:flex;flex-direction:column;gap:24px;width:900px">
+<p style="font-size:26px;letter-spacing:6px;color:#82C53F;font-weight:500">— PHẦN 04</p>
+<h2 style="font-size:96px;font-weight:700;line-height:1.05">Meeting &amp; Townhall</h2>
+<p style="text-align:justify;font-size:34px;color:#C5D8BB;font-weight:300">Quản trị cuộc họp, ghi nhận bằng Amber Note và truyền thông toàn hệ thống</p>
+</div>
+<div style="position:absolute;left:128px;bottom:120px;width:1664px;display:flex;gap:48px">
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">01 Nền tảng vận hành</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:380px">02 Work OS</p>
+<p style="font-size:26px;color:#8FAA86;padding-bottom:10px;border-bottom:3px solid #2F5A3B;width:420px">03 Digital Workforce</p>
+<p style="font-size:26px;color:#82C53F;font-weight:500;padding-bottom:10px;border-bottom:3px solid #82C53F;width:380px">04 Meeting &amp; Townhall</p>
+</div>
+</section>
+<section id="meeting" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/be569ba46c2aa23c75dcd8240a9be6a5.png" alt="Meeting" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">MEETING</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Chuyển kết luận cuộc họp thành công việc có thể theo dõi</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Mỗi cuộc họp xác định rõ người chủ trì, thành phần tham dự và chương trình.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Nội dung thảo luận và các quyết định được tổng hợp thành biên bản.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Công việc sau họp được phân công trách nhiệm và theo dõi tiến độ thực hiện.</p>
+</div>
+</div>
+<video data-src="assets/9078fe659e056e075ac115a33c42a8f8.mp4" poster="assets/d422bee6a2af68564d38097df4d272b9.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">24</p>
+</section>
+<section id="amber" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/be569ba46c2aa23c75dcd8240a9be6a5.png" alt="Meeting" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">MEETING · AMBER NOTE</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Ghi nhận nội dung cuộc họp với thiết bị Amber Note</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Amber Note hỗ trợ thu âm tại phòng họp và kết nối với Meeting.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Nội dung phát biểu được chuyển thành văn bản theo mốc thời gian và người nói.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Giảm thao tác ghi chép thủ công, giúp người tham dự tập trung trao đổi.</p>
+</div>
+</div>
+<video data-src="assets/c190806d120777acfaefcce9d7446171.mp4" poster="assets/15e6a28a5797666004a8abc2c685f4f9.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">25</p>
+</section>
+<section id="meetai" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/be569ba46c2aa23c75dcd8240a9be6a5.png" alt="Meeting" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">MEETING · PHÂN TÍCH AI</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">AI hỗ trợ tổng hợp kết luận và xác định đầu việc sau họp</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Tổng hợp nội dung trọng tâm, vấn đề cần lưu ý, rủi ro và quyết định chính.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Trích xuất danh sách công việc để phân công người phụ trách.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Người chủ trì kiểm tra, xác nhận trước khi phát hành biên bản.</p>
+</div>
+</div>
+<video data-src="assets/a5a167eea8befc652f8f07a3ce597eb0.mp4" poster="assets/ba8c4a2fd6b1884740371b7628c34d32.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">26</p>
+</section>
+<section id="townhall" data-transition="fade" style="background:#F6F9F2;color:#17261C;font-family:Roboto, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;align-items:center;gap:48px">
+<div style="width:496px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/97186040f6e3fc57f31a84a29ad60c7d.png" alt="Townhall" style="width:48px;height:48px;object-fit:contain"><p style="font-size:24px;letter-spacing:4px;color:#3D7A1C;font-weight:500">TOWNHALL</p></div>
+<h2 style="font-size:52px;font-weight:700;line-height:1.12">Thiết lập kênh truyền thông chính thức cho toàn hệ thống Bamboo</h2>
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Phát hành thông tin đến toàn hệ thống hoặc theo khối, cơ sở, ban chuyên môn.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Theo dõi mức độ tiếp cận thông qua số người đã đọc và đang theo dõi.</p>
+<p style="text-align:justify;font-size:28px;line-height:1.35;color:#2E3F33;padding-top:18px;border-top:1px solid #CFDDC4">Từng bước thay thế các nhóm Inside hiện hữu bằng không gian thông tin chung.</p>
+</div>
+</div>
+<video data-src="assets/f9003eba416ff7fe29e352971d51c882.mp4" poster="assets/e60562b1a595f61d123b1cc91ef2d5f4.png" muted loop playsinline preload="none" style="width:1120px;height:708px;object-fit:contain;border:1px solid #CFDDC4;border-radius:16px"></video>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#5B6B5F">Bamboo School × Base 2.0</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5B6B5F;text-align:right">27</p>
+</section>
+<section id="closing" data-transition="fade" style="background:linear-gradient(160deg,#0F2A1A 0%,#123621 55%,#1B4A2B 100%);color:#EAF3E2;font-family:Roboto, sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;padding:128px">
+<div style="display:flex;align-items:center;gap:40px">
+<div style="background:#F6F9F2;border-radius:14px;padding:10px 24px;display:flex"><img src="assets/9d30055d5a44b5086a9f73fd5c8a3e90.png" alt="Bamboo School" style="width:163px;height:60px;object-fit:contain"></div>
+<div style="width:2px;height:56px;background:#3C6B49"></div>
+<img src="assets/aebffac171eb9168d98b5e8d8979cce0.png" alt="Base.vn" style="width:152px;height:48px;object-fit:contain">
+</div>
+<p style="font-size:26px;letter-spacing:8px;color:#82C53F;font-weight:500">BASE CAM KẾT</p>
+<h1 style="font-size:110px;font-weight:300;line-height:1.1;text-align:center">Lắng nghe <span style="color:#82C53F">·</span> Cải tiến <span style="color:#82C53F">·</span> Đồng hành</h1>
+<p style="font-size:60px;font-weight:700;color:#82C53F;text-align:center">cùng Bamboo School</p>
+<p style="text-align:justify;font-size:30px;color:#B7D0AA;font-weight:300">kiến tạo mô hình vận hành thông minh trong kỷ nguyên AI</p>
+</section>
+
+</div><div id="bar"></div><div id="nav">← → để chuyển slide · F để toàn màn hình</div>
+<script>
+const S=[...document.querySelectorAll('section')];let i=0;
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);document.getElementById('stage').style.transform='translate(-50%,-50%) scale('+k+')'}
+function show(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>{s.classList.toggle('on',k==i);s.querySelectorAll('video').forEach(v=>{if(k==i){if(!v.src)v.src=v.dataset.src;v.currentTime=0;v.play().catch(()=>{})}else v.pause()})});document.getElementById('bar').style.width=((i+1)/S.length*100)+'%';location.hash=i+1}
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key))show(i+1);else if(['ArrowLeft','PageUp','Backspace'].includes(e.key))show(i-1);else if(e.key=='Home')show(0);else if(e.key=='End')show(S.length-1);else if(e.key=='f'||e.key=='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}});
+let tx=0;addEventListener('touchstart',e=>tx=e.touches[0].clientX);addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(i+(d<0?1:-1))});
+addEventListener('click',e=>{show(i+(e.clientX<innerWidth*.25?-1:1))});
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script></body></html>
